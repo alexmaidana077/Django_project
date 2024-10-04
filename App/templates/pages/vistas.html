@@ -9,12 +9,6 @@
             <h4 class="card-title">Nombre: {{i.Nombre}}</h5>
             <h5 class="card-title">Descripcion: {{i.Descripcion}}</h5>
             <p class="card-text">Precio: {{i.Precio}}</p>
-            {% if perms.App.change_personajes %}
-            <a href="{% url 'modificar' i.Codigo %}" class="btn btn-outline-light">Editar</a>
-            {% endif %}
-            {% if perms.App.delete_personajes %}
-            <a href="{% url 'eliminar' i.Codigo %}" class="btn btn-outline-danger">Eliminar</a>
-            {% endif %}
         </div>
     </div>
     {% endfor %}
