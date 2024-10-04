@@ -11,6 +11,8 @@ from django.contrib.auth.decorators import login_required, permission_required
 def Home(request):
     return render(request, 'index.html')
 
+@login_required
+@permission_required('App.add_remedios')
 def Agregar(request):
     data = {
         'forms': Nuevo_Remedio()
@@ -24,6 +26,27 @@ def Agregar(request):
             data['forms'] = query 
     return render(request, 'Pages/agregar.html', data)
 
+@permission_required('App.change_remedios')
+def Modificar_Remedios(request,Codigo):
+    sql=get_object_or_404(Remedios,Codigo=Codigo)
+    data={
+        'forms':Nuevo_Remedio(instance=sql)
+    }
+    if request.method=='POST':
+        query=Nuevo_Remedio(data=request.POST,instance=sql,files=request.FILES)
+        if  query.is_valid():
+            query.save()
+            data['mensaje']="Datos Modificados Correctamente "
+        else:
+            data['forms']=Nuevo_Remedio
+    return render (request,'Pages/modificar.html',data)
+
+# boton eliminar
+@permission_required('App.delete_remedios')
+def Eliminar_Remedios(request,Codigo):
+    buscar=get_object_or_404(Remedios,Codigo=Codigo)
+    buscar.delete()
+    return redirect(to="home")
 
 def Ver_Producto(request):
     forms = Remedios.objects.all()

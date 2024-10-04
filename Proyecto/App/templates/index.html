@@ -18,11 +18,16 @@
                 class="logo"></a>
 
                 <nav class="menu_selectivo">
-            
+                    {% if perms.App.add_remedios %}
                     <a href="{% url 'agregar'%}" class="menu">Agregar</a>
-                   
+                    {% endif %}
                     <a href="{% url 'vistas'%}" class="menu">Visualizar</a>
-                   
+
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'logouts' %}" id="contacto_btl">Cerrar Sesión</a>
+                    {% else %}
+                    <a href="{% url 'login' %}" id="contacto_btl">Iniciar Sesión</a>
+                    {% endif %}
                 </nav>
     </header>
     <main class="contenedor_general">
