@@ -1,5 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
-def home(request):
-    
+from .forms import *
+
+from .models import *
+
+def Home(request):
     return render(request, 'index.html')

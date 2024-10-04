@@ -16,9 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from App.views import home  # Importamos la función 'home' desde el archivo 'App/views.py'
+from App.views import Home  # Importamos la función 'home' desde el archivo 'App/views.py'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home, name='home'), 
+    path('', Home, name='home'), 
 ]
