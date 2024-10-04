@@ -16,9 +16,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from App.views import Home  # Importamos la función 'home' desde el archivo 'App/views.py'
+#---->Importamos Settings
+from django.conf import settings
+#----> Importar Static
+from django.conf.urls.static import static
+from App.views import * 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', Home, name='home'), 
+    path('', Home, name='home'),
+    path('agregar/',Agregar,name='agregar'),
+    path('vistas/', Ver_Producto,name= 'vistas'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

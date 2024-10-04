@@ -17,7 +17,7 @@
         <a href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="Logo" title="Logo"
                 class="logo"></a>
         <nav class="menu_selectivo">
-            <a href="" class="menu">Agregar</a>
+            <a href="{% url 'agregar'%}" class="menu">Agregar</a>
             <a href="" class="menu">Visualizar</a>
         </nav>
     </header>
@@ -42,8 +42,8 @@
                 <img src="{{i.Imagen.url}}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h4 class="card-title">{{i.Nombre}}</h5>
-                        <h5 class="card-title">{{i.Casa}}</h5>
-                        <p class="card-text">{{i.Hechizo}}</p>
+                        <h5 class="card-title">{{i.Descripcio}}</h5>
+                        <p class="card-text">{{i.Precio}}</p>
                         {% if perms.App.change_personajes %}
                         <a href="{% url 'modificar' i.Codigo %}" class="btn btn-outline-light">Editar</a>
                         {% endif %}

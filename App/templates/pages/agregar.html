@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+{% load static %}
+<!-- Segundo Bloque -->
+{% block cuerpo %}
+<div class="contenedor_agregar">
+    <img src="" alt="">
+    <form action="" method="post" enctype="multipart/form-data">
+        <!-- PR desde Views -->
+        <h4>Cargue el Remedio</h4>
+        {{forms}}
+        {% csrf_token %}
+        <!-- Botón para Consulta -->
+        <input type="submit" class="btn btn-outline-primary" value="Registrar">
+        <p class="mensaje">{{manin}}</p>
+    </form>
+</div>
+{% endblock %}
