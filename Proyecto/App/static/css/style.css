@@ -208,3 +208,57 @@ body {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más intensa al hacer hover */
 }
 
+
+.contenedor_login{
+    margin: auto;
+    background-color: #4c5e8f;
+    width: 400px;
+    padding: 50%;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+/* Título del formulario */
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+
+/* Estilos de los inputs */
+input[type="text"], input[type="password"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Estilos del botón de submit */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100px;
+    margin: 20px auto 0; /* Esto centra el botón */
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
