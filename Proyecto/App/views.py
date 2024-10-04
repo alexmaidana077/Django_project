@@ -55,6 +55,19 @@ def Ver_Producto(request):
     }
     return render (request, 'Pages/vistas.html', data)
 
+def Agregar_Receta(request):
+    data = {
+        'forms': Nueva_Receta()
+    }
+    if request.method == 'POST':
+        query = Nueva_Receta(request.POST, request.FILES)
+        if query.is_valid():
+            query.save()
+            data['manin'] = "Registrado Correctamente"
+        else:
+            data['forms'] = query 
+    return render(request, 'Pages/agregar.html', data)
+
 def Salir(request):
     logout(request)
     return redirect(to='home')

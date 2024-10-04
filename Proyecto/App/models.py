@@ -12,3 +12,11 @@ class Remedios(models.Model):
 
     def __int__(self):
         self.Codigo
+
+class SubirReceta(models.Model):
+    Codigo=models.AutoField(primary_key=True)
+    Nombre=models.TextField(max_length=30)
+    Imagen=models.ImageField(upload_to="Recetas",null=True)
+
+    def __int__(self):
+        self.Codigo
