@@ -1,23 +1,6 @@
 {% extends 'index.html' %}
 {% load static %}
 {% block cuerpo %}
-<div class="filtros">
-    <form action="" method="get">
-
-        <div class="dropdown">
-            <button id="filtroo" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Casa
-            </button>
-            <ul class="dropdown-menu">
-              <input type="submit" class="dropdown-item" name="filtro" value="Gryffindor" id="Gryffindo" >
-              <input type="submit" class="dropdown-item" name="filtro" value="Ravenclaw" id="Ravencla">
-              <input type="submit" class="dropdown-item" name="filtro" value="Hufflepuff" id="Hufflepuf">
-              <input type="submit" class="dropdown-item" name="filtro" value="Slytherin" id="Slytheri">
-              <input type="submit" class="dropdown-item" name="filtro" value="">
-            </ul>
-          </div>
-    </form>
-</div>
 <div class="contenedor_visualizar">
     {% for i in forms %}
     <div class="card" style="width: 18rem;">

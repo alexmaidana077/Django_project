@@ -112,9 +112,7 @@ body {
     margin: 10px 0;
 }
 
-.btn {
-    margin: 5px;
-}
+
 
 .footer {
     background-color: #0080ff; /* Color de fondo oscuro */
@@ -150,5 +148,63 @@ body {
 
 .footer a:hover {
     opacity: 0.8;
+}
+
+/*-------form-------------*/
+
+.contenedor_agregar{
+    margin: auto;
+    background-color: #4c5e8f;
+    width: 400px;
+    padding: 10px;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.contendor_agregar form{
+    display: flex;
+}
+
+.contenedor_agregar textarea{
+    width: 300px;
+    height: 30px;
+    margin: 5px 0px;
+}
+
+
+.contenedor_agregar h4{
+    margin: 5px 0px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.contenedor_agregar label{
+    margin-right: 100px;
+}
+/* Botón Moderno */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #dfe1e9; /* Color sólido para el fondo */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px; /* Un borde más suave que 50px */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra más sutil */
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto hover del botón */
+.btn:hover {
+    background-color: #5062cc; /* Cambio de color de fondo al hacer hover */
+    transform: translateY(-3px); /* El botón se eleva al hacer hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más intensa al hacer hover */
 }
 
